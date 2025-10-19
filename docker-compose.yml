@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./docker/python/Dockerfile
+    ports:
+      - "${DJANGO_PORT:-8000}:8000"
+    volumes:
+      - ./api:/api
+    env_file:
+      - ./envs/.env.api
+    # Override Dockerfile CMD for development
+    command: python manage.py runserver 0.0.0.0:8000
+    # command: tail -f /dev/null
+    # depends_on:
+    # - mysql
+  react:
+    build:
+      context: .
+      dockerfile: ./docker/js/Dockerfile
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  # mysql:
+  #   image: mysql:8.0
+  #   ports:
+  #     - "${MYSQL_PORT:-3306}:3306"
+  #   env_file:
+  #     - ./envs/.env
+  #   volumes:
+  #     - mysql_data:/var/lib/mysql
+  #   command: --default-authentication-plugin=mysql_native_password
+# volumes:
+# mysql_data:

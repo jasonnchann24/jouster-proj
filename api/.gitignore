@@ -1,0 +1,50 @@
+# Python virtual environment
+env/
+venv/
+
+# SQLite database
+*.sqlite3
+
+# Django migrations
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Docker
+*.pid
+
+# Ignore compiled files
+*.so
+
+# Ignore test coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+test-results/
+
+# Ignore static files (if generated)
+staticfiles/
+
+# Ignore media files (if generated)
+media/

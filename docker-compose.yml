@@ -20,11 +20,12 @@ services:
     build:
       context: .
       dockerfile: ./docker/js/Dockerfile
-    working_dir: /app
     ports:
       - "3000:3000"
     volumes:
       - ./client:/app
+      - /app/node_modules
+      - /app/.next
     environment:
       - CHOKIDAR_USEPOLLING=true
 

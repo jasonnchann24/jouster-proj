@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save
-from api.common.models import SoftDeleteModel, TimestampedModel
+from common.models import SoftDeleteModel, TimestampedModel
 
 
 class UserProfile(SoftDeleteModel, TimestampedModel):

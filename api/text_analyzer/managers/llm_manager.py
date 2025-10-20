@@ -1,4 +1,4 @@
-from api.text_analyzer.protocols.llm_protocol import LLMStrategy, ExtractedData
+from text_analyzer.protocols.llm_protocol import LLMStrategy, ExtractedData
 
 
 class LLMManager:

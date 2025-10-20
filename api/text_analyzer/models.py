@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from api.common.models import SoftDeleteModel, TimestampedModel
+from common.models import SoftDeleteModel, TimestampedModel
 
 
 class TextAnalysis(SoftDeleteModel, TimestampedModel):

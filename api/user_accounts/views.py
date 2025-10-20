@@ -1,7 +1,7 @@
 from django.contrib.auth.models import Group, User
 from rest_framework import permissions, viewsets, filters
-from api.common import permissions as commonPermissions
-from api.user_accounts.serializers import (
+from common import permissions as commonPermissions
+from user_accounts.serializers import (
     GroupSerializer,
     UserSerializer,
     UserUpdateSerializer,

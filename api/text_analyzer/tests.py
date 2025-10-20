@@ -8,7 +8,7 @@ class TextAnalyzerAPITests(APITestCase):
     def setUp(self):
         self.client = APIClient()
 
-    @patch("api.text_analyzer.serializers.LLMManager")
+    @patch("text_analyzer.serializers.LLMManager")
     def test_analyze_post(self, mock_llm_manager):
         mock_llm_manager.return_value.summarize.return_value = "Hello world"
         mock_llm_manager.return_value.get_metadata.return_value = ExtractedData(

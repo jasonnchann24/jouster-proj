@@ -1,7 +1,7 @@
-from api.text_analyzer.services import extract_top_nouns
+from text_analyzer.services import extract_top_nouns
 from django.conf import settings
 from openai import OpenAI
-from api.text_analyzer.protocols.llm_protocol import ExtractedData
+from text_analyzer.protocols.llm_protocol import ExtractedData
 from rest_framework.exceptions import APIException
 
 

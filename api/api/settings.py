@@ -46,9 +46,9 @@ INSTALLED_APPS = [
     "django_filters",
     "corsheaders",
     "rest_framework",
-    "api.common",
-    "api.user_accounts",
-    "api.text_analyzer",
+    "common",
+    "user_accounts",
+    "text_analyzer",
 ]
 
 MIDDLEWARE = [

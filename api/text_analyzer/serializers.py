@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import TextAnalysis
-from api.user_accounts.serializers import UserSerializer
+from user_accounts.serializers import UserSerializer
 from .strategies.OpenAIStrategy import OpenAIStrategy
 from .managers.llm_manager import LLMManager
 

@@ -18,13 +18,13 @@ Including another URLconf
 # from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView
-from api.text_analyzer import views as text_analyzer_views
+from text_analyzer import views as text_analyzer_views
 
 urlpatterns = [
     # path("admin/", admin.site.urls),
     path("", RedirectView.as_view(url="/api/", permanent=False)),
-    path("api/users/", include("api.user_accounts.urls")),
-    path("api/text-analyzer/", include("api.text_analyzer.urls")),
+    path("api/users/", include("user_accounts.urls")),
+    path("api/text-analyzer/", include("text_analyzer.urls")),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     # Specific endpoints for text analysis
     path(
